@@ -1,0 +1,17 @@
+/* 常用主色 背景颜色*/
+/* 主要用于按钮以及修饰元素 蓝绿色 */
+.layui-bg-primary-element{
+	background-color: #009688;
+}
+
+/* 一般用于选中状态 */
+.layui-bg-primary-seleted{
+	background-color:#5FB878;
+}
+
+/* 通常用于导航 */
+.layui-bg-primary-seleted{
+	background-color:#393D49;
+}
+
+.

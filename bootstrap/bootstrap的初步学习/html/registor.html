@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>欢迎注册</title>
+		<link rel="stylesheet" href="./css/bootstrap-3.3.7/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/bootstrap-3.3.7/bootstrap-theme.min.css" />
+		<style type="text/css">
+			.error{
+				color: red;
+				font-size: 12px;
+			}
+			.container{
+				margin: 50px auto 0px;
+				width: 400px;
+			}
+			.btn{
+				width: 100%;
+			}
+			.back{
+				margin-left: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript" src="./js/jquery.min-3_5_1.js"></script>
+		<script type="text/javascript" src="./css/bootstrap-3.3.7/bootstrap.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js/messages_zh.min.js"></script>
+		<div class="container">
+			<p class="h1 text-center">欢迎注册</p>
+			<form id="registor" action="" method="post">
+			  <div class="form-group">
+			    <label for="username">用户名</label>
+			    <input type="text" class="form-control" name="username" id="username" placeholder="请输入用户名" required="required">
+			  </div>
+			  <div class="form-group">
+			    <label for="email">邮箱地址</label>
+			    <input type="email" class="form-control" name="email" id="email" placeholder="请输入邮箱地址" required="required">
+			  </div>
+			  <div class="form-group">
+			    <label for="password1">设置密码</label>
+			    <input type="password" class="form-control" name="password1" id="password1" placeholder="请设置密码" required="required">
+			  </div>
+			  <div class="form-group">
+			    <label for="password2">确认密码</label>
+			    <input type="password" class="form-control" name="password2" id="password2" placeholder="请再次输入密码" required="required">
+			  </div>
+			  <div class="form-group">
+			    <label for="invitation">邀请码</label>
+			    <input type="text" class="form-control" name="ivitation" id="invitation" placeholder="请输入邀请码" required="required">
+			  </div>
+			  
+			  <div class="checkbox">
+			    <label>
+			     <input type="checkbox" name="agreement"> 我已认真阅读已阅读<a href="">用户协议</a>。
+				 <span class="back"><a href="./../index.jsp">返回登录页面</a></span> 
+			    </label>
+			  </div>
+			  <button type="submit" class="btn btn-info">注册</button>
+			</form>
+
+		</div>
+		<script type="text/javascript">
+			var jq = $.noConflict();
+			// 自定义密码验证
+			    jQuery.validator.addMethod("checkPwd", function(value, element) {
+			        var pwd =/^([a-zA-Z0-9]+)$/  ;
+			        return this.optional(element) || (pwd.test(value));
+			    }, "密码长度应该在8~20之间且只能含有数字和字符");
+			jq(function(){
+				jq("#registor").validate({
+					rules:{
+						username:{
+							required:true,
+							maxlength:20
+						},
+						email:{
+							required:true,
+							email:true
+						},
+						password1:{
+							required:true,
+							maxlength:20,
+							minlength:8,
+							checkPwd:true
+						},
+						password2:{
+							required:true,
+							equalTo:"#password1"
+						},
+						invitation:{
+							required:true
+						},
+						agreement:{
+							required:true
+						}
+						
+					},
+					messages:{
+						username:"必填且不能超过20个字符",
+						email:"请填写正确的邮箱地址",
+						password1:"密码长度应该在8~20之间且只能含有数字和字符",
+						password2:"两次输入的密码不一致",
+						invitation:"请填写邀请码",
+						agreement:"请先阅读用户协议"
+					},
+					errorPlacement : function(error, element) {
+					            if (element.is(':radio') || element.is(':checkbox')) { // 如果是radio或checkbox
+					                var eid = element.attr('name'); // 获取元素的name属性
+					                error.appendTo(element.parent()); // 将错误信息添加当前元素的父结点后面
+					            } else {
+					                error.insertAfter(element);
+					            }
+					        }
+				})
+			})
+		</script>
+	</body>
+	
+</html>

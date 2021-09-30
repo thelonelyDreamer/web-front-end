@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+		
+		<script src="../../js/jQuery/jquery-1_4_4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			/**
+			 * 	jQuery
+			 * 		+ 前端方法库，封装了各种对dom操纵
+			 * 			插件：实现某一个单一类功能
+			 * 			库：封装了各种功能和你需要的工具
+			 * 			框架：有自己完整的生态系统
+			 * 		+ 优点
+			 * 			1. 选择器
+			 * 			2. 链式编程
+			 * 			3. 隐式迭代
+			 * 		+ 特点
+			 * 			1. 2.0以前的版本全兼容
+			 * 			2. 2.0以后逐步不再兼容IE
+			 * 			3. 会向全局暴露两个变量 $ jQuery
+			 * 
+			 * 			选择器=选择器+筛选器
+			 * 
+			 * 一般选择器
+			 * 		+ 语法 ：$(选择器)
+			 * 		+ 返回值：满足条件的所有元素，id选择器选择第一个
+			 * 			放在一个元素数组里面
+			 * 		+ 这个数组叫元素集合
+			 * 		+ 你的CSS如何捕获标签的，现在就怎么捕获
+			 * 		eg:
+			 * 			$("p")
+			 * 			$(".class")
+			 * 			$("#id")
+			 * 			$("div > ul")
+			 * 			$("[name=username]")
+			 * 特殊选择器
+			 * 		语法： $(选择器)
+			 * 		=> 对已经存在的选择器进行修饰
+			 * 		1.:first
+			 * 		2.:last
+			 * 		3.:eq(index)
+			 * 		4.:odd 按照索引排列的奇数个
+			 * 		5.:even 按照索引排列的奇数个
+			 */
+			
+			console.log($("div > ul"))
+		</script>
+	</body>
+</html>

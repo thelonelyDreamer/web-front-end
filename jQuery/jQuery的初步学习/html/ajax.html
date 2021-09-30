@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ajax</title>
+	</head>
+	<body>
+		
+		<!-- 
+		 1. get() 请求
+			语法:$.get(地址，传给后端的数据，成功回调函数，期望返回的数据类型)
+				数据：'key=value&key=value',也可以写{...}：对象
+				返回的数据： 'string' 'json'
+				回调函数可以有一个参数res
+		2. post() 请求
+			语法:$.post(地址，传给后端的数据，成功回调函数，期望返回的数据类型)
+		3. ajax() 
+			语法：ajax(对象)
+			
+			1.url
+			2.async 是否异步
+			3.type/method 请求方式 默认为get
+			4.data: 传递给后端的参数 字符串或者对象
+			5.dataType:期望返回的类型
+			6.success(res): 成功的回调函数
+			7. error(xhr,info,err): 失败的回调函数 解析失败
+				xhr jQuery封装的ajax 对象
+				info:错误信息
+				err:错误的详细信息
+			8. timeout: 设置超时
+			9. cache: 是否缓存 对于ajax 请求默认缓存 jsonp默认为不缓存
+			10 context: 上下文
+				context传递是谁，回调函数就this 就是指向谁
+			promise 的形式
+			
+			$.ajax({suceess(){}}).then(function(){
+				成功后不会两个都会执行 succes then 
+			})
+			
+			跨域请求
+			1. jsonp
+				前端利用script 标签和src 绕开同源策略
+			2. 代理服务器
+			3. 
+			
+			ajax 发送jsoup请求
+			
+			只要dataTpye 书写成jsonp 
+			
+		 -->
+		 jQuery 的全局钩子函数 不是自主触发
+		 <script src="../js/jQuery/jquery-3_5_1.js" type="text/javascript"></script>
+		 <script type="text/javascript">
+			 $(window).ajaxStart();//第一个请求开始
+			 $(window).ajaxSend();
+			 $(window).ajaxSuccess();
+			 $(window).ajaxError();
+			 $(window).ajaxComplete();
+			 $(window).ajaxStop(); //最后一个请求结束了
+			 
+		 </script>
+		 
+		
+	</body>
+</html>

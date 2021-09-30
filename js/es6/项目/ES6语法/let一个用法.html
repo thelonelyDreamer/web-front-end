@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 60px;
+            background-color: rgb(124, 119, 119);
+            width: 300px;
+        }
+        .item{
+            height: 50px;
+            width: 80px;
+            float: left;
+            margin-top: 5px;
+            margin-left: 15px ;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <script>
+        let items=document.getElementsByClassName("item");
+        //console.log(items);
+        for(let i=0;i<items.length;i++){
+            items[i].onclick=function(){
+                this.style.backgroud= 'pink';
+            }
+        }
+        console.log(i);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+header{
+	text-align: center;
+	background-color: black;
+	box-shadow: 10px 5px 5px rgba(75,75,75,1);
+}
+
+li{
+	list-style-type: none;
+	display: inline;
+}
+
+a{
+	text-decoration: none;
+	color: #e5e5e5;
+	font-size: 23px;
+	padding: 0 15px;
+}
+a:hover,
+a.item{
+	color: aqua;
+}

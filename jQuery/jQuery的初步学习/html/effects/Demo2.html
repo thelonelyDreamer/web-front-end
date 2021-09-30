@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>隐藏所有的段落</title>
+		<script src="../../js/jQuery/jquery-1_4_4.js" type="text/javascript"></script>
+		
+	</head>
+	<body>
+		<a href="../../index.html">返回主页</a><br>
+		<h2>hide all  paragraph</h2><br>
+		<p>这是一段文字</p><br>
+		<p>这又是一段文字</p><br>
+		<p>这又是一段文字</p><br>
+		<button type="button">隐藏</button>
+	</body>
+	<script type="text/javascript">
+		$().ready(function(){
+			$("button").click(function(){
+				$("p").hide();
+			});
+		});
+	</script>
+	
+</html>

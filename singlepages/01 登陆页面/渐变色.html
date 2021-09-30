@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>王超的项目</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#main{
+				width: 100%;
+				height: calc(100vh);
+				background: linear-gradient(
+				 30deg,#0e0b96,#6996ff
+				);
+				
+			}
+			.center{
+					display: block;
+				    position: absolute;
+				    top: 10%;
+				    left: 50%;
+				    width: 90%;
+				    height: 80%;
+				    margin-left: -45%;
+					background: linear-gradient(
+					 30deg,#6996ff,#0e0b96
+					);
+					border:5px dotted #110ecc ;
+					border-radius: 10px;
+					border-style: outset;
+					opacity: 0.8;
+			}
+			.logo{
+				width: 200px;
+				height: 220px;
+				background-image: url(./image/earth.png);
+				background-size: cover;
+				margin-top:calc(25vh);
+				margin-left: 20%;
+				float: left;
+			}
+
+			.login{
+				background-color: #e7e2da;
+				width:calc(25vw);
+				margin-left:calc(50vw);
+				margin-top:calc(25vh);
+				padding: 20px;	
+				border:3px dotted #110ecc ;
+				border-radius: 5px;
+				border-style: outset;
+			}
+			.inputbox{
+				width:calc(20vw);
+				height: 30px;
+				margin: 10px auto;
+			}
+			.inputborder{
+				border:1px solid #E7E2DA;
+				border: groove;
+			}
+			input{
+				border: none;
+				outline: none;
+				width:calc(20vw);
+				height: 30px;
+			}
+			#codeinput{
+				width: calc(10vw);
+			}
+			#codeimg{
+				margin-left: calc(1vw);
+				width: calc(9vw);
+			}
+			#checkinput{
+				margin-left: calc(1vw);
+				width: 20px;
+			}
+			.inputbox4 {
+				font-size: 14px;
+				/*flex 布局*/
+				display: flex;
+				/*实现垂直居中*/
+				align-items: center;
+			}
+			
+			.inputbox4 a{
+				text-decoration: none;
+				margin-left: calc(3vw);
+			}
+			.sub{
+				width:calc(20vw);
+				height: 30px;
+				margin: 10px auto;
+			}
+			.sub input{
+				background-color: #0084FF;
+				letter-spacing: 40px;
+				text-indent: 40px ;
+			}
+			h2{
+				letter-spacing: 10px;
+				text-indent: 10px ;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="main">
+			<div class="center">
+				<div class="logo"></div>
+				<div class="context login">
+					<form action="" method="post">
+						<h2 align="center">欢迎登陆</h2>
+						<div class="inputbox ">
+							<input type="text" name="mail" placeholder="请输入邮箱" class="inputborder"/>
+						</div>
+						<div class="inputbox inputbox2">
+							<input type="password" name="password" placeholder="请输入密码" class="inputborder"/>
+						</div>
+						<div class="inputbox">
+							<input type="text" name="code" placeholder="请输入验证码" id="codeinput" class="inputborder"/>
+							<img src="" alt="验证码" id="codeimg"/>
+						</div>
+						<div class="inputbox inputbox4">
+								<input type="checkbox" name="savepsd" value="savepsd" id="checkinput"/>记住密码
+								<a href="">忘记密码</a>
+								<a href="">注册</a>
+						</div>
+						<div class="sub">
+							<input type="submit" name="submit" value="登陆" id="subbtn"/>
+						</div>	
+					</form>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var img = document.getElementById("codeing");
+			    img.addEventListener("click", function () {
+			        img.src = "${pageContext.request.contextPath}/createCode?time=" + new Date().getTime();
+			    });
+		</script>
+	</body>
+</html>

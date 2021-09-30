@@ -1,0 +1,30 @@
+a{
+	text-decoration: none;
+}
+
+body{
+	background-color: white;
+	padding: 16px;
+	font-family: tahoma;
+}
+
+#main{
+	width: 100%;
+	background-color: #2A4783;
+}
+
+.head{
+	display:flex;
+	justify-content: space-between;
+}
+
+.logo{
+	padding: 20px 0px 0px 20px;
+	width: 120px;
+	height: 30px;
+}
+
+#imglogo{
+	width: 120px;
+	height: 30px;
+}

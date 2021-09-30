@@ -1,0 +1,24 @@
+.main{
+	margin: 100px auto 0px;
+	width:400px;
+}
+h1{
+	text-align: center;
+}
+.img-code{
+	padding-top: 25px;
+}
+#code{
+	display: inline;
+	height: 35px;
+	width: 150px;
+}
+.form-group{
+	height: 50px;
+}
+.link{
+	margin-top: 10px;
+}
+span{
+	margin-left: 10px;
+}

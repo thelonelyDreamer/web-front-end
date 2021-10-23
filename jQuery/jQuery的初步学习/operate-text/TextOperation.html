@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery 操作</title>
+	</head>
+	<body>
+		<div>
+			第一级div
+			<div>
+				第二级div
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+		<script type="text/javascript">
+			
+			/* 
+				jQuery 操作文本内容
+				+ 操作元素内的文本和超文本
+				+ 只能jQuery元素集合使用，原生的DOM不能使用
+				1. html()
+					1.元素集合.html()
+						元素集合的超文本内容，以字符串的形式返回
+						只能拿第一个的值
+					2.元素集合.html()
+						设置元素集合内的超文本内容
+						覆盖式写入
+						隐式迭代
+				2. text()
+					1.元素集合.text()
+						元素集合的文本内容，以字符串的形式返回
+						拿到所有元素的文本内容，以一个字符串的形式返回
+					2. 元素集合.text('string')
+						设置元素集合内元素的文本内容
+						覆盖式写入
+						隐式迭代
+				3. val()
+					=> 语法
+					1. 元素集合.val()
+						获取元素集合内值，只能拿到第一值
+					2. 元素集合.val('文本')
+						设置元素集合内元素的value 值
+						完全覆盖式写入
+						隐式迭代
+			 */
+		</script>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>layout</title>
+    </head>
+
+    <body>
+        <div class="layout">
+            <header>头部</header>
+            <aside>侧边栏</aside>
+            <main>内容</main>
+            <footer>底部</footer>
+        </div>
+        <style>
+            .layout {
+                display: grid;
+                grid-template-areas:
+                    "header header header"
+                    "sidebar content content"
+                    "footer footer footer";
+            }
+
+            header {
+                grid-area: header;
+                background-color: aqua;
+            }
+
+            main {
+                grid-area: content;
+            }
+
+            aside {
+                grid-area: sidebar;
+            }
+
+            footer {
+                grid-area: footer;
+            }
+        </style>
+    </body>
+
+    </html>

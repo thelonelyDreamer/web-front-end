@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单选择器</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+<body>
+    <div>
+        <form>
+        用户名:<input name="username" type="text"></input><br />
+        密码:<input name="password" type="password"></input><br />
+        爱好:<input type="checkbox" checked="checked" name="hobbits" /> 篮球
+        <input type="checkbox" checked="checked" name="hobbits" /> 足球
+        <input type="checkbox" checked="checked" name="hobbits" /> 排球 <br />
+        性别:<input type="radio" name="sex" value="male">男
+        <input type="radio" name="sex" value="female" />女<br />
+        邮箱:<input type="text" name="email" disabled="disabled" /><br />
+        所在地：
+        <select name="addr">
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">广州</option>
+        </select><br />
+        <input type="submit" value="提交"/>
+        </form>
+    </div>
+    <script type="text/javascript">
+        // 显示不可选的输入框
+        $(":text:disabled").css("background","red")
+        // 显示选择的个数
+        var len = $(":checkbox:checked").length
+        console.log(len)
+        // 显示选择的结果
+        $(":submit").click(()=>{
+            var text = $("select>option:selected").html()
+            var city = $('select').val()
+            alert(text + city)
+        })
+    </script>
+</body>
+</html>

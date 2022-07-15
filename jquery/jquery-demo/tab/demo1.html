@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab切换</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+<body>
+    <ul id="lis">
+        <li>tab1</li>
+        <li>tab2</li>
+        <li>tab3</li>
+    </ul>
+    <div id="container">
+        <div>第一块</div>
+        <div>第二块</div>
+        <div>第三块</div>
+    </div>
+
+    <script type="text/javascript">
+        var selected;
+        var index
+        $(()=>{
+            selected=0;
+            index=0
+            $("#container div:first").css("display","block")
+        })
+
+        $('#lis>li').click(function(){
+            $("#container").children()[selected].style.display='none'
+            index = $(this).index()
+            // console.log(index)
+            // console.log($("#container")[index])
+           $("#container").children()[index].style.display='block'
+            selected=index
+        })
+    </script>
+
+    <style>
+        ul{
+            height: 60px;
+            width: 600px;
+            margin: 0;
+            padding: 0;
+            line-height: 100%;
+        }
+        ul li{
+            display: inline;
+            height: 60px;
+            width: 200px;
+            color: brown;
+            line-height: 60px;
+            background-color: aquamarine;
+            text-align: center;
+        }
+        #container div{
+            display: none;
+        }
+    </style>
+</body>
+</html>
